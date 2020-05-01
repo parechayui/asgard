@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/parechayui/asgard.git/static/css/main.92db3648.chunk.css",
+    "main.js": "/parechayui/asgard.git/static/js/main.e1832675.chunk.js",
+    "main.js.map": "/parechayui/asgard.git/static/js/main.e1832675.chunk.js.map",
+    "runtime-main.js": "/parechayui/asgard.git/static/js/runtime-main.918b3560.js",
+    "runtime-main.js.map": "/parechayui/asgard.git/static/js/runtime-main.918b3560.js.map",
+    "static/js/2.860113bb.chunk.js": "/parechayui/asgard.git/static/js/2.860113bb.chunk.js",
+    "static/js/2.860113bb.chunk.js.map": "/parechayui/asgard.git/static/js/2.860113bb.chunk.js.map",
+    "index.html": "/parechayui/asgard.git/index.html",
+    "precache-manifest.f359ffeedeb941f13e742a5cad8097cf.js": "/parechayui/asgard.git/precache-manifest.f359ffeedeb941f13e742a5cad8097cf.js",
+    "service-worker.js": "/parechayui/asgard.git/service-worker.js",
+    "static/css/main.92db3648.chunk.css.map": "/parechayui/asgard.git/static/css/main.92db3648.chunk.css.map",
+    "static/js/2.860113bb.chunk.js.LICENSE.txt": "/parechayui/asgard.git/static/js/2.860113bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.918b3560.js",
+    "static/js/2.860113bb.chunk.js",
+    "static/css/main.92db3648.chunk.css",
+    "static/js/main.e1832675.chunk.js"
+  ]
+}
