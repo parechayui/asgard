@@ -1,17 +1,46 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+import {CardList} from './components/card-list/card-list.component';
+import {SearchForm} from './components/search-box/search.component';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import './app.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+class App extends Component{
+    constructor(props) {
+        super(props);
+        this.state = { monsters: [],
+        searchName: ''};
+    }
+     userData = async() =>{
+        let userInfo = await axios.get('https://jsonplaceholder.typicode.com/users');
+        return userInfo.data;
+    }
+
+    handleChange = (event) =>{
+       event.preventDefault();
+
+    }
+
+    componentDidMount() {
+
+        this.userData().then(data => this.setState({monsters: data}))
+            .catch(err => { console.log("Error"+ err.message())});
+    }
+
+    render() {
+       const {monsters, searchName} = this.state;
+       const filteredMonsters = monsters.filter(monster =>
+           monster.name.toLowerCase().includes(searchName.toLowerCase())
+       );
+            return (
+                <div className='App'>
+                    <SearchForm placeholder='search users' handleChange={e => this.setState({searchName: e.target.value})}/>
+             <CardList monsters={filteredMonsters} />
+            </div>
+            );
+        }
+}
+
+ReactDOM.render(<App />,document.getElementById('root'));
